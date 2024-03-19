@@ -16,6 +16,11 @@ public class SortingProject {
         for (int value : arr){
             System.out.print(" " + value);
         }
+        SelectionSort(arr);
+        System.out.println();
+        for(int value:arr){
+            System.out.print(" " + value);
+        }
     }
 
     public static void BubbleSort(int[] arr){
@@ -32,7 +37,27 @@ public class SortingProject {
             }
         }
     }
+
+public static void SelectionSort(int[] arr){
+    int minIndex, temp;
+
+    for(int i = 0; i < arr.length; i++){
+        minIndex = i;
+
+        for(int j = i; j < arr.length; j++){
+            if(arr[j] < arr[minIndex]){
+                minIndex = j;
+            }
+        }
+
+        temp = arr[i];
+        arr[i] = minIndex;
+        arr[minIndex] = temp;
+
+    }
 }
+
 //public static void Swap(){
 
 //}
+}
