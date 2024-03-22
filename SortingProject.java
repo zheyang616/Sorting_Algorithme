@@ -110,7 +110,7 @@ public static void Merge(int[] leftArray, int[] rightArray, int[] array){
 
     int mainIndex = 0, leftArrayIndex = 0, rightArrayIndex = 0;
 
-    if(leftArrayIndex < leftArraySize && rightArrayIndex < rightArraySize){
+    while(leftArrayIndex < leftArraySize && rightArrayIndex < rightArraySize){
         if(leftArray[leftArrayIndex] < rightArray[rightArrayIndex]){
             array[mainIndex] = leftArray[leftArrayIndex];
             mainIndex++;
